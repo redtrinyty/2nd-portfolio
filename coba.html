@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .voba {
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      height: 200px;
+      background: red;
+      margin: auto;
+      box-sizing: border-box;
+      align-items: center;
+      top: 50%;
+    }
+    button {
+      padding: 5px;
+      box-sizing: border-box;
+      align-items: center;
+      display: flex;
+    }
+  </style>
+  <body>
+    <div class="voba">
+      <button type="button">
+        sudah di click sebanyak <span id="count">0</span>
+      </button>
+    </div>
+  </body>
+  <script>
+    function hare() {
+      location.replace("https://web.whatsapp.com/");
+    }
+    let i = 0;
+    const count = document.getElementById("count");
+    const vobas = document.querySelector("button");
+    vobas.addEventListener("click", function () {
+      count.innerText++;
+      if (count.innerText == 7) {
+        alert("kamu sudash ");
+      } else if (count.innerText == 8) {
+        hare(vobas);
+      }
+    });
+  </script>
+</html>
